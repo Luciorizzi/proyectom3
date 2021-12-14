@@ -1,0 +1,278 @@
+$P_left: 6%;
+
+.container {
+  width: 250px;
+  height: 500px;
+  align-items: center;
+}
+.align {
+  display: flex;
+  justify-content: center;
+}
+
+.txt {
+  font-weight: bolder;
+}
+.hola {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5%;
+  padding-right: 25%;
+  justify-content: center;
+}
+
+.btnCompra {
+  width: 200px;
+  background-color: black;
+  color: white;
+  font-size: 24px;
+  height: 50px;
+}
+.baul {
+  display: flex;
+}
+.filtros {
+  height: 700px;
+  width: 500px;
+  padding-left: 20%;
+  font-size: 25px;
+}
+
+.txtFiltros {
+  font-size: 16px;
+  padding-bottom: 10px;
+  padding-left: $P_left;
+}
+
+.container_list {
+  padding-bottom: 20px;
+}
+
+.checkbox {
+  font-size: 14px;
+  padding-left: $P_left;
+}
+
+div ul {
+  font-size: 12px;
+  color: gray;
+  margin-left: -10;
+}
+div ul:hover {
+  text-decoration: underline;
+}
+
+div ul li {
+  display: none;
+  position: absolute;
+  margin-left: -10;
+}
+
+div ul:hover li {
+  display: block;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.txtTitulo {
+  padding-left: $P_left;
+}
+.tamanhos {
+  border: solid 1px lightgrey;
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  color: gray;
+  display: block;
+  margin: 4px;
+}
+.containerTamanhos1 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px;
+  height: 120px;
+  padding-left: 4%;
+  margin-bottom: 20px;
+}
+
+.tamanhos:focus {
+  border: lightskyblue solid 2px;
+}
+
+.App-logo {
+  width: 150px;
+  height: 40px;
+  margin: 2% 5% 0 15%;
+  padding-bottom: 20px;
+  display: inline;
+}
+
+.App-header {
+  border-bottom: solid 1px black;
+}
+
+.Bag-logo {
+  width: 50px;
+  height: 40px;
+  margin: 2% 0 0 0;
+  padding: 0 0px 20px 55%;
+  display: inline;
+  position: relative;
+  z-index: -1;
+}
+
+.txtBlack {
+  color: black;
+}
+
+.bagContainer {
+  position: relative;
+  display: inline;
+}
+.bagTxt {
+  display: inline;
+  position: absolute;
+  left: 98%;
+  z-index: 1;
+  bottom: 25%;
+  background-color: rgb(42, 197, 248);
+  border: solid 2px rgb(42, 197, 248);
+  border-top-left-radius: 200px 200px;
+  border-bottom-left-radius: 200px 200px;
+  border-top-right-radius: 200px 200px;
+  border-bottom-right-radius: 200px 200px;
+  width: 10px;
+  height: 10px;
+  color: white;
+  font-size: 14px;
+  align-content: center;
+  padding-left: 0.2%;
+  padding-bottom: 1%;
+}
+
+.Ordenar {
+  font-size: 16px;
+  color: black;
+  margin-left: 80px;
+  border: solid 1px black;
+  width: 180px;
+  padding-left: 10;
+  display: inline;
+  z-index: 1;
+  cursor: pointer;
+  background-color: white;
+}
+
+
+.OrdenType {
+  position: relative;
+  
+  cursor: pointer;
+  background-color: white;
+  left: 80px;
+  border-right: solid 1px black;
+  border-left: solid 1px black;
+  border-bottom: none;
+  border-top: none;
+  width: 180px;
+}
+.OrdenType2 {
+  position: relative;
+  
+  cursor: pointer;
+  background-color: white;
+  left: 80px;
+  border-right: solid 1px black;
+  border-left: solid 1px black;
+  border-top: none;
+  border-bottom: none;
+  width: 180px;
+  margin: 0;
+}
+.OrdenType3 {
+  position: relative;
+  cursor: pointer;
+  background-color: white;
+  left: 80px;
+  border-right: solid 1px black;
+  border-left: solid 1px black;
+  border-bottom:solid 1px black;;
+  border-top: none;
+  width: 180px
+}
+
+
+.Ordenar:focus .OrdenType {
+  display: block;
+  position: relative;
+  padding-bottom: 5px;
+  left: 300px;
+  border-right: solid 1px black;
+  border-left: solid 1px black;
+  cursor: pointer;
+  width: 150px;
+  background-color: white;
+}
+
+.Ordenar:focus .OrdenType2 {
+  display: block;
+  position: relative;
+  padding-bottom: 5px;
+  left: 300px;
+  border-right: solid 1px black;
+  border-left: solid 1px black;
+  width: 150px;
+  cursor: pointer;
+  background-color: white;
+}
+.Ordenar:focus .OrdenType3 {
+  display: block;
+  position: relative;
+  padding-bottom: 5px;
+  left: 300px;
+  border-right: solid 1px black;
+  border-left: solid 1px black;
+  border-bottom: solid 1px black;
+  width: 150px;
+  cursor: pointer;
+  background-color: white;
+}
+.ContainerClear {
+  width: 100%;
+  padding-left: 100px;
+}
+.ContainerOrdenar {
+  padding-top: 20px;
+  width: 180px;
+  display: inline;
+}
+.OrdenType:focus {
+  background-color: rgb(79, 193, 231);
+}
+.OrdenType2:focus {
+  background-color: rgb(79, 193, 231);
+}
+.OrdenType3:focus {
+  background-color: rgb(79, 193, 231);
+}
+
+.Clear{
+  background-color: white;
+  display: flex;
+  margin-left: 120px;
+  border: solid 1px black;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.Clear:focus{
+  background-color:  rgb(79, 193, 231);;
+}
+.footer{
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  }

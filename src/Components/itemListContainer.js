@@ -1,25 +1,31 @@
 
 import Item from "./item.js";
-import "./item.css";
+import "../Styles/variables.scss";
 import { Storectxt } from "../Context/store";
 import { useContext } from "react";
-import Filtros from "./filtros";
-import { useState } from "react/cjs/react.development";
+import { useEffect, useState } from "react/cjs/react.development";
+import Clear from "./filtros/clear.js";
 
 
 const ItemListContainer = () => {
-  const {products} = useContext(Storectxt);
-  
-  
+  const {products,setProducts, items} = useContext(Storectxt);
+  const [menu, setMenu]= useState([])
 
+ 
+useEffect(()=>{
+  setMenu(products)
+console.log(products)
+
+})
 
   return (
     <div className="baul">
-    <div><Filtros/></div>
+    <div> <Clear menu= {menu} setMenu={setMenu} /></div>
+   
     <div className="hola">
-      {products.map((item) => (
+      {menu.map((item) => (
         <div key={item.id}>
-          <Item item={item} />
+          <Item item={item} menu= {menu} />
         </div>
       ))}
     </div>

@@ -1,19 +1,22 @@
 import Header from "./Components/Header/header.js";
-import "./App.css";
+import "./Styles/variables.scss"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemListContainer from "./Components/itemListContainer.js";
 import StoreContext from "./Context/store.js";
-
+import Footer from "./Components/footer.js";
 function App() {
   return (
     <StoreContext>
-      <Header />
-     
+    
       <BrowserRouter>
+      <Header /> 
         <Routes>
           <Route exact path="/" element={<ItemListContainer />} />
         </Routes>
+      
+        <Footer/>
       </BrowserRouter>
+     
     </StoreContext>
   );
 }

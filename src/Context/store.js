@@ -6,7 +6,8 @@ export const Storectxt = createContext();
 const StoreContext = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [items,setItems]= useState([])
-
+  const [cart,setCart]= useState([])
+  
 
 
   const getData = () => {
@@ -36,7 +37,7 @@ const StoreContext = ({ children }) => {
   }, []);
 
   return (
-    <Storectxt.Provider value={{ products, setProducts, items}}>
+    <Storectxt.Provider value={{ products, setProducts, items, cart, setCart}}>
       {children}
     </Storectxt.Provider>
   );
