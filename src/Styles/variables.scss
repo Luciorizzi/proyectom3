@@ -23,6 +23,7 @@ $P_left: 6%;
   margin-top: 5%;
   padding-right: 25%;
   justify-content: center;
+  padding-left: 10%;
 }
 
 .btnCompra {
@@ -154,6 +155,9 @@ div ul:hover li {
   padding-bottom: 1%;
 }
 
+.imagenItem{
+  width: 100px;
+}
 .Ordenar {
   font-size: 16px;
   color: black;
@@ -169,7 +173,6 @@ div ul:hover li {
 
 .OrdenType {
   position: relative;
-
   cursor: pointer;
   background-color: white;
   left: 80px;
@@ -285,31 +288,32 @@ div ul:hover li {
   display: inline;
 }
 
-.FiltrarMovil{
+.FiltrarMovil {
   display: none;
 }
-.txtMovil{
+.txtMovil {
   display: flex;
   justify-content: left;
   font-size: 25px;
   padding-left: 25%;
 }
-.Carregar{
+.Carregar {
   display: flex;
   background-color: rgb(6, 179, 236);
-  color:white;
-  width:200px;
+  color: white;
+  width: 200px;
   justify-content: center;
   height: 50px;
   font-size: 20px;
   margin-bottom: 100px;
+  margin-top: 20px;
   padding-top: 1%;
   border: none;
   position: relative;
-
 }
 
-.ClearCarrito{
+
+.ClearCarrito {
   background-color: white;
   border: solid 1px black;
   height: 40px;
@@ -321,34 +325,82 @@ div ul:hover li {
   margin-top: 10px;
   margin-bottom: 30px;
 }
-.ClearCarrito:hover{
+.ClearCarrito:hover {
   background-color: red;
   border: solid 1px black;
   height: 40px;
   width: 120px;
-  color:white
+  color: white;
 }
-.txtCarrito{
+.txtCarrito {
   display: flex;
   justify-content: center;
 }
+.OrdenarMovil {
+  display: none;
+}
+.MenuMovil {
+  display: none;
+}
+.txtH1{
+  font-size: 22px;
+  padding-left: 21px;
+}
+.inputCarregar{
+  margin: 10px;
+  border-radius: 7px;
+  background-color: lightblue;
+}
 /*MEDIA*/
 @media (max-width: 1200px) {
+  .MenuMovil {
+    display: block;
+  }
+  .txtH1{
+    font-size: 22px;
+    padding-left: 21px;
+    display: none;
+  }
   .baul {
     display: block;
   }
   .hola {
     padding: 0;
     justify-content: space-around;
-    font-size: 12px;
+    font-size: 13px;
+    position: absolute;
+  }
+  .footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    margin-top: 150%;
+    position: relative;
+    font-size: 14px;
+  }
+
+  .Carregar {
+    display: flex;
+    background-color: rgb(6, 179, 236);
+    color: white;
+    width: 150px;
+    justify-content: center;
+    height: 40px;
+    font-size: 17px;
+    margin-bottom: 100px;
+    border: none;
   }
   .ContainerClear {
-    display: block;
+    display: inline-block;
     padding-left: 0;
   }
+
   .container {
     width: 150px;
   }
+
   .btnCompra {
     width: 130px;
     background-color: black;
@@ -359,6 +411,7 @@ div ul:hover li {
   .ContainerFiltros {
     display: none;
   }
+ 
 
   .Ordenar {
     font-size: 12px;
@@ -367,22 +420,22 @@ div ul:hover li {
     border: solid 1px black;
     width: 130px;
     height: 50px;
-    display: inline;
     z-index: 1;
     cursor: pointer;
     background-color: white;
+    margin-left: 48.3%;
   }
   .OrdenType {
     width: 130px;
-    margin-left: 12.5%;
+    margin-left: 23.5%;
   }
   .OrdenType2 {
     width: 130px;
-    margin-left: 12.5%;
+    margin-left: 23.5%;
   }
   .OrdenType3 {
     width: 130px;
-    margin-left: 12.5%;
+    margin-left: 23.5%;
   }
   .txtTitulo {
     padding-right: 15px;
@@ -397,53 +450,119 @@ div ul:hover li {
     height: 50px;
     float: left;
     z-index: 2;
-    margin-left: 8%;
     display: inline;
-
+    margin-left: 10%;
   }
-  .txtMovil{
+  .OrdenarMovil {
+    background-color: white;
+    border: solid 1px black;
+    width: 130px;
+    height: 50px;
+    float: left;
+    z-index: 2;
+    margin-left: 8%;
+    display: block;
+  }
+  .txtMovil {
     display: flex;
     justify-content: center;
     font-size: 25px;
     padding-left: 0%;
   }
 
-.Bag-logo {
-  width: 40px;
-  height: 30px;
-  z-index: -1;
-  margin-top: 20px;
-}
-.App-logo {
-  width: 120px;
-  height: 30px;
-  margin-top: 20px;
-  margin-right: 100px;}
+  .Bag-logo {
+    width: 40px;
+    height: 30px;
+    z-index: -1;
+    margin-top: 20px;
+  }
+  .App-logo {
+    width: 120px;
+    height: 30px;
+    margin-top: 20px;
+    margin-right: 100px;
+  }
 
-.App-header {
-  border-bottom: solid 1px black;
-  display: flex;
-  justify-content: space-around;
+  .App-header {
+    border-bottom: solid 1px black;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .bagTxt {
+    display: inline;
+    position: absolute;
+    left: 80%;
+    z-index: 1;
+    bottom: 50%;
+    background-color: rgb(42, 197, 248);
+    border: solid 2px rgb(42, 197, 248);
+    border-top-left-radius: 200px 200px;
+    border-bottom-left-radius: 200px 200px;
+    border-top-right-radius: 200px 200px;
+    border-bottom-right-radius: 200px 200px;
+    width: 10px;
+    height: 10px;
+    color: white;
+    font-size: 13px;
+    align-content: center;
+    padding-left: 1%;
+    padding-bottom: 2%;
+  }
+}
+.filtros {
+  display: inline-block;
+  height: 100%;
+  max-width: 1300px;
   width: 100%;
-}
-.bagTxt {
-  display: inline;
-  position: absolute;
-  left: 80%;
+  padding-left: 20%;
+  font-size: 25px;
   z-index: 1;
-  bottom: 50%;
-  background-color: rgb(42, 197, 248);
-  border: solid 2px rgb(42, 197, 248);
-  border-top-left-radius: 200px 200px;
-  border-bottom-left-radius: 200px 200px;
-  border-top-right-radius: 200px 200px;
-  border-bottom-right-radius: 200px 200px;
-  width: 10px;
-  height: 10px;
-  color: white;
-  font-size: 13px;
-  align-content: center;
-  padding-left: 1%;
-  padding-bottom: 2%;
 }
+.txtTitulo {
+  display: none;
+}
+.inputCarregar{
+  margin: 10px;
+  border-radius: 7px;
+  background-color: lightblue;
+}
+
+@media (max-width:900px ){
+  .footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    margin-top: 200%;
+    position: relative;
+    font-size: 14px;
+  }
+}
+@media (max-width:600px ){
+  .footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    margin-top: 700%;
+    position: relative;
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width:400px ){
+  .footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    margin-top: 950%;
+    position: relative;
+    font-size: 14px;
+  }
 }

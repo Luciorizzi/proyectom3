@@ -59,6 +59,7 @@ const Filtros = ({ menu, setMenu, setClear, clear }) => {
         <div className="filtros">
           <p className="txtTitulo">Filtros</p>
           <div>
+            <h1 className="txtH1">Blusas</h1>
             <p className="txtFiltros">CORES</p>
           </div>
           <div className="category_list">

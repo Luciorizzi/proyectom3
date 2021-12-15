@@ -5,7 +5,7 @@ import { Storectxt } from "../Context/store";
 import { useContext } from "react";
 import { useEffect, useState } from "react/cjs/react.development";
 import Clear from "./filtros/clear.js";
-import Carrito from "./carrito.js";
+import Carregador from "./carregador.js";
 
 
 const ItemListContainer = () => {
@@ -29,10 +29,10 @@ console.log(products)
           <Item item={item} menu= {menu} />
         </div>
       ))}
-      {products.length ===0 && <p>No hay productos de esta categoria!!</p>}
-      <button className="Carregar">Carregar Mais</button>
+      {products.length ===0 && <p>Não há nenhum produto nesta categoria!!</p>}
+      <Carregador/>
     </div>
-
+    
     </div>
   );
 };

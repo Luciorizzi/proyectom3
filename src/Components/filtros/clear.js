@@ -21,14 +21,13 @@ const Clear = ({ menu, setMenu }) => {
   return (
 
     <div className="ContainerClear">
-     
-      <button className="Clear" onClick={() => setClear("clear")}> Filtros Limpos </button>
       
+     
+      <button className="Clear" onClick={() => setClear("clear")}> Filtros Limpos </button> 
+     
       <MenuMovil menu={menu} setClear={setClear} setMenu={setMenu} clear={clear}/>
-     
-
-      
       <div className="ContainerFiltros">
+      <Ordenar menu={menu} setClear={setClear} setMenu={setMenu} clear={clear}/>
         <Filtros menu={menu} setMenu={setMenu} setClear={setClear} clear= {clear} />
       </div>
   </div>

@@ -5,7 +5,7 @@ import "../../Styles/variables.scss";
 
 const Ordenar = ({ menu, setClear, setMenu, clear }) => {
   const [ordenado, setOrdenado] = useState();
-  const {products,setProducts}= useContext(Storectxt)
+
   const menor = menu.sort((a, b) => {
     if (a.price < b.price) {
       return -1;
