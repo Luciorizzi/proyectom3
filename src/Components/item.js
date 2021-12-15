@@ -8,11 +8,23 @@ const Item = ({ item}) => {
  
   const{cart,setCart}= useContext(Storectxt)
 
+const id =item.id
 
 const addToCart =(item)=>{
+  const check =
+  cart.length && cart.find((item) => item.id === id);
+  if (check === 0 || check === undefined) {
+    setCart([...cart, item]);
+  }
+  else{
+  const index = cart.findIndex((item) => item.id === check.id);
+
+  cart.splice(index, 1);
   setCart([...cart, item])
 
+  }
 }
+
 
 
 

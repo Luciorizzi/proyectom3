@@ -1,8 +1,11 @@
 import { useEffect } from "react";
-import { useState } from "react/cjs/react.development";
+import { useContext, useState } from "react/cjs/react.development";
+import { Storectxt } from "../../Context/store";
 import "../../Styles/variables.scss";
+
 const Ordenar = ({ menu, setClear, setMenu, clear }) => {
   const [ordenado, setOrdenado] = useState();
+  const {products,setProducts}= useContext(Storectxt)
   const menor = menu.sort((a, b) => {
     if (a.price < b.price) {
       return -1;
@@ -11,6 +14,7 @@ const Ordenar = ({ menu, setClear, setMenu, clear }) => {
 
   useEffect(() => {
     if (ordenado === "Menor") {
+     
       setMenu(menor);
     }
 
@@ -27,10 +31,10 @@ const Ordenar = ({ menu, setClear, setMenu, clear }) => {
       setMenu(recientes);
       console.log("recientes", recientes);
     }
-
+console.log('clear',clear)
     console.log("mmenor", menor);
 
-    /*console.log('menor', menor)*/
+    console.log('ordenado', ordenado)
   }, [ordenado]);
 
   return (

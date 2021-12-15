@@ -12,7 +12,7 @@ const Tamanhos = ({setClear}) =>{
 
 
  useEffect(()=>{
-     const filterDatos = products.filter((item) => item.tamanho === currentTamanho)
+     const filterDatos = items.filter((item) => item.tamanho === currentTamanho)
 setProducts(filterDatos)
 setClear('Noclear')
 

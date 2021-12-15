@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import "../../Styles/variables.scss"
 const Faixadepreço = ( {setClear, menu}) => {
 const [preço, setPreço] = useState()
-const{products, setProducts} = useContext(Storectxt)
+const{products, setProducts, items} = useContext(Storectxt)
 
  
 
@@ -38,7 +38,7 @@ useEffect(() => {
   
   if(preço >=10 ){
   
-  const filterPreço = menu.filter(
+  const filterPreço = items.filter(
       (item) => item.price <= 50
 
       );
@@ -48,7 +48,7 @@ useEffect(() => {
     }
     if(preço >=51 ){
   
-      const filterPreço = menu.filter(
+      const filterPreço = items.filter(
           (item) => item.price <= 150
     
           );
@@ -58,7 +58,7 @@ useEffect(() => {
         }
         if(preço >=151 ){
   
-          const filterPreço = menu.filter(
+          const filterPreço = items.filter(
               (item) => item.price <= 300
         
               );
@@ -69,7 +69,7 @@ useEffect(() => {
 
             if(preço >=301 ){
   
-              const filterPreço = menu.filter(
+              const filterPreço = items.filter(
                   (item) => item.price >= 301
             
                   );
@@ -79,7 +79,7 @@ useEffect(() => {
                 }
                 if(preço ===1 ){
   
-                  const filterPreço = menu.filter(
+                  const filterPreço = items.filter(
                       (item) => item.price <= 500
                 
                       );

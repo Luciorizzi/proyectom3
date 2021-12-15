@@ -4,6 +4,7 @@ import { Storectxt } from "../../Context/store";
 import "../../Styles/variables.scss";
 import Filtros from "./filtros";
 import Ordenar from "./ordenar";
+import MenuMovil from "../menuMovil";
 const Clear = ({ menu, setMenu }) => {
   const [clear, setClear] = useState("NoClear");
   const { products, setProducts, items } = useContext(Storectxt);
@@ -18,14 +19,20 @@ const Clear = ({ menu, setMenu }) => {
   console.log(clear);
 
   return (
+
     <div className="ContainerClear">
      
       <button className="Clear" onClick={() => setClear("clear")}> Filtros Limpos </button>
-      <Ordenar menu={menu} setClear={setClear} setMenu={setMenu} clear={clear} />
-      <div>
+      
+      <MenuMovil menu={menu} setClear={setClear} setMenu={setMenu} clear={clear}/>
+     
+
+      
+      <div className="ContainerFiltros">
         <Filtros menu={menu} setMenu={setMenu} setClear={setClear} clear= {clear} />
       </div>
-    </div>
+  </div>
+  
   );
 };
 export default Clear;

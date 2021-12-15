@@ -45,14 +45,11 @@ const Filtros = ({ menu, setMenu, setClear, clear }) => {
   };
 
   useEffect(() => {
-    const filterData = menu.filter(
+    const filterData = items.filter(
       (item) => item.cores === currentCategorie
     );
-    
     setProducts(filterData);
     setClear("Noclear");
- 
-
   }, [currentCategorie]);
 
   console.log(currentCategorie);
@@ -60,7 +57,7 @@ const Filtros = ({ menu, setMenu, setClear, clear }) => {
     <div>
       <div>
         <div className="filtros">
-          <p className="txtTitulo">BLUSAS</p>
+          <p className="txtTitulo">Filtros</p>
           <div>
             <p className="txtFiltros">CORES</p>
           </div>
