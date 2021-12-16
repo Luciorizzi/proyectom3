@@ -5,10 +5,8 @@ export const Storectxt = createContext();
 
 const StoreContext = ({ children }) => {
   const [products, setProducts] = useState([]);
-  const [items,setItems]= useState([])
-  const [cart,setCart]= useState([])
-  
-
+  const [items, setItems] = useState([]);
+  const [cart, setCart] = useState([]);
 
   const getData = () => {
     const db = getFirestore();
@@ -22,8 +20,7 @@ const StoreContext = ({ children }) => {
         }
 
         setProducts(querySnapshot.docs.map((doc) => doc.data()));
-       setItems(querySnapshot.docs.map((doc) => doc.data()))
-   
+        setItems(querySnapshot.docs.map((doc) => doc.data()));
       })
       .catch((error) => {
         console.log("Error al traer los items, error");
@@ -32,12 +29,10 @@ const StoreContext = ({ children }) => {
 
   useEffect(() => {
     getData();
-
-
   }, []);
 
   return (
-    <Storectxt.Provider value={{ products, setProducts, items, cart, setCart}}>
+    <Storectxt.Provider value={{ products, setProducts, items, cart, setCart }}>
       {children}
     </Storectxt.Provider>
   );

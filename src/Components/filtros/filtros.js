@@ -6,14 +6,12 @@ import { useEffect } from "react/cjs/react.development";
 import { useRef } from "react";
 import Tamanhos from "./tamanhos";
 import Faixadepreço from "./faixadepreço";
-import Clear from "./clear";
 
 
-const Filtros = ({ menu, setMenu, setClear, clear }) => {
-  const { products, setProducts, items } = useContext(Storectxt);
+const Filtros = ({ menu, setMenu, setClear }) => {
+  const { setProducts, items } = useContext(Storectxt);
   const [currentCategorie, setCurrentCategorie] = useState("All");
 
-  
   const checkRef2 = useRef();
   const checkRef3 = useRef();
   const checkRef4 = useRef();
@@ -39,20 +37,17 @@ const Filtros = ({ menu, setMenu, setClear, clear }) => {
       if (e.target.id !== item.id) {
         item.checked = false;
       }
-     
+
       return console.log("checked is..." + e.target.id);
     });
   };
 
   useEffect(() => {
-    const filterData = items.filter(
-      (item) => item.cores === currentCategorie
-    );
+    const filterData = items.filter((item) => item.cores === currentCategorie);
     setProducts(filterData);
     setClear("Noclear");
   }, [currentCategorie]);
 
-  console.log(currentCategorie);
   return (
     <div>
       <div>
@@ -81,7 +76,7 @@ const Filtros = ({ menu, setMenu, setClear, clear }) => {
                 type="checkbox"
                 onClick={() => setCurrentCategorie("Azul")}
               ></input>
-            <label>Azul</label>
+              <label>Azul</label>
             </div>
             <div className="checkbox">
               <input
@@ -91,7 +86,7 @@ const Filtros = ({ menu, setMenu, setClear, clear }) => {
                 type="checkbox"
                 onClick={() => setCurrentCategorie("Branco")}
               ></input>
-             <label>Branco</label>
+              <label>Branco</label>
             </div>
             <div className="checkbox">
               <input
@@ -101,7 +96,7 @@ const Filtros = ({ menu, setMenu, setClear, clear }) => {
                 type="checkbox"
                 onClick={() => setCurrentCategorie("Cinza")}
               ></input>
-            <label>Cinza</label>
+              <label>Cinza</label>
             </div>
             <div className="checkbox">
               <input
@@ -111,7 +106,7 @@ const Filtros = ({ menu, setMenu, setClear, clear }) => {
                 type="checkbox"
                 onClick={() => setCurrentCategorie("Laranja")}
               ></input>
-             <label>Laranja</label>
+              <label>Laranja</label>
             </div>
             <div className="mas">
               <ul>
@@ -125,7 +120,7 @@ const Filtros = ({ menu, setMenu, setClear, clear }) => {
                     type="checkbox"
                     onClick={() => setCurrentCategorie("Sim cor")}
                   ></input>
-                 <label>Sim cor</label>
+                  <label>Sim cor</label>
                 </li>
                 <li>
                   <input
@@ -136,7 +131,7 @@ const Filtros = ({ menu, setMenu, setClear, clear }) => {
                     type="checkbox"
                     onClick={() => setCurrentCategorie("Rosado")}
                   ></input>
-               <label>Rosado</label>
+                  <label>Rosado</label>
                 </li>
                 <li>
                   <input
@@ -147,7 +142,7 @@ const Filtros = ({ menu, setMenu, setClear, clear }) => {
                     className="boton"
                     onClick={() => setCurrentCategorie("Vermelho")}
                   ></input>
-                <label>Vermelho</label>
+                  <label>Vermelho</label>
                 </li>
               </ul>
             </div>
@@ -161,7 +156,7 @@ const Filtros = ({ menu, setMenu, setClear, clear }) => {
             />
           </div>
           <div>
-            <Faixadepreço menu={menu} setClear= {setClear} />
+            <Faixadepreço menu={menu} setClear={setClear} />
           </div>
         </div>
       </div>

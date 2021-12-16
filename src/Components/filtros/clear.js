@@ -7,31 +7,42 @@ import Ordenar from "./ordenar";
 import MenuMovil from "../menuMovil";
 const Clear = ({ menu, setMenu }) => {
   const [clear, setClear] = useState("NoClear");
-  const { products, setProducts, items } = useContext(Storectxt);
+  const { setProducts, items } = useContext(Storectxt);
 
   useEffect(() => {
     if (clear === "clear") {
       setProducts(items);
     }
-
-
   }, [clear]);
-  console.log(clear);
 
   return (
-
     <div className="ContainerClear">
-      
-     
-      <button className="Clear" onClick={() => setClear("clear")}> Filtros Limpos </button> 
-     
-      <MenuMovil menu={menu} setClear={setClear} setMenu={setMenu} clear={clear}/>
+      <button className="Clear" onClick={() => setClear("clear")}>
+        {" "}
+        Filtros Limpos{" "}
+      </button>
+
+      <MenuMovil
+        menu={menu}
+        setClear={setClear}
+        setMenu={setMenu}
+        clear={clear}
+      />
       <div className="ContainerFiltros">
-      <Ordenar menu={menu} setClear={setClear} setMenu={setMenu} clear={clear}/>
-        <Filtros menu={menu} setMenu={setMenu} setClear={setClear} clear= {clear} />
+        <Ordenar
+          menu={menu}
+          setClear={setClear}
+          setMenu={setMenu}
+          clear={clear}
+        />
+        <Filtros
+          menu={menu}
+          setMenu={setMenu}
+          setClear={setClear}
+          clear={clear}
+        />
       </div>
-  </div>
-  
+    </div>
   );
 };
 export default Clear;

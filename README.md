@@ -68,3 +68,20 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### `Requisitos`
+Para usar o create-react-app, você precisa ter o Node.js instalado. Recomenda-se usar a versão Long Term Support (LTS). O nó inclui npm (o gerenciador de pacote do nó) e npx (o executor do pacote do nó).
+
+Você também pode usar o gerenciador de pacotes Yarn como alternativa, mas assumiremos que você usará o npm nestes tutoriais. Consulte Noções básicas de gerenciamento de pacotes para obter mais informações sobre npm e yarn.
+
+Se estiver usando Windows, você precisará instalar algum software para dar paridade com o terminal Unix / macOS, para que possa usar os comandos de terminal mencionados neste tutorial. Gitbash (que vem como parte do kit de ferramentas git para Windows) ou o Subsistema Windows para Linux (WSL) são adequados. Consulte o Command Line Crash Course para aprender mais sobre isso e sobre os comandos de terminal em geral.
+
+Observe também que o React e o ReactDOM produzem aplicativos que funcionam apenas em um conjunto bastante moderno de navegadores (IE9 + por meio de alguns polyfills). Usar um navegador moderno como Firefox, Safari ou Chrome é recomendado ao trabalhar com esses tutoriais.
+
+### `errors`
+Tem apenas dois erros. Essa filtragem de ordem só se aplica ao interagir com o componente itemListContainer e o segundo problema é que ao navegar entre os componentes, os produtos não são recarregados no itemListContainer. Peço desculpas por esses erros, mas faço o possível para corrigi-los e não consegui.
+
+### `github/ Email`
+https://github.com/Luciorizzi/proyectom3
+
+rizzilucio25@gmail.com

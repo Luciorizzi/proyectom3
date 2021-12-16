@@ -3,15 +3,10 @@ import { useState } from "react/cjs/react.development";
 import { Storectxt } from "../../Context/store";
 import { useContext } from "react";
 import { useEffect } from "react";
-import "../../Styles/variables.scss"
-const Faixadepreço = ( {setClear, menu}) => {
-const [preço, setPreço] = useState()
-const{products, setProducts, items} = useContext(Storectxt)
-
- 
-
-
-
+import "../../Styles/variables.scss";
+const Faixadepreço = ({ setClear, menu }) => {
+  const [preço, setPreço] = useState();
+  const {  setProducts, items } = useContext(Storectxt);
 
   const checkRef10 = useRef();
   const checkRef11 = useRef();
@@ -27,66 +22,44 @@ const{products, setProducts, items} = useContext(Storectxt)
       checkRef14.current,
     ];
     refArray.map((item) => {
-        if (e.target.id !== item.id) {
-          item.checked = false;
-        }
-        return console.log("checked is..." + e.target.id);
-      });
-};
-useEffect(() => {
- 
-  
-  if(preço >=10 ){
-  
-  const filterPreço = items.filter(
-      (item) => item.price <= 50
+      if (e.target.id !== item.id) {
+        item.checked = false;
+      }
+      return console.log("checked is..." + e.target.id);
+    });
+  };
+  useEffect(() => {
+    if (preço >= 10) {
+      const filterPreço = items.filter((item) => item.price <= 50);
+      setProducts(filterPreço);
 
-      );
-      setProducts(filterPreço)
-     
-      setClear('Noclear')
+      setClear("Noclear");
     }
-    if(preço >=51 ){
-  
-      const filterPreço = items.filter(
-          (item) => item.price <= 150
-    
-          );
-          setProducts(filterPreço)
-          
-          setClear('Noclear')
-        }
-        if(preço >=151 ){
-  
-          const filterPreço = items.filter(
-              (item) => item.price <= 300
-        
-              );
-              setProducts(filterPreço)
-              
-              setClear('Noclear')
-            }
+    if (preço >= 51) {
+      const filterPreço = items.filter((item) => item.price <= 150);
+      setProducts(filterPreço);
 
-            if(preço >=301 ){
-  
-              const filterPreço = items.filter(
-                  (item) => item.price >= 301
-            
-                  );
-                  setProducts(filterPreço)
-                 
-                  setClear('Noclear')
-                }
-                if(preço ===1 ){
-  
-                  const filterPreço = items.filter(
-                      (item) => item.price <= 500
-                
-                      );
-                      setProducts(filterPreço)
-                      
-                      setClear('Noclear')
-                    }
+      setClear("Noclear");
+    }
+    if (preço >= 151) {
+      const filterPreço = items.filter((item) => item.price <= 300);
+      setProducts(filterPreço);
+
+      setClear("Noclear");
+    }
+
+    if (preço >= 301) {
+      const filterPreço = items.filter((item) => item.price >= 301);
+      setProducts(filterPreço);
+
+      setClear("Noclear");
+    }
+    if (preço === 1) {
+      const filterPreço = items.filter((item) => item.price <= 500);
+      setProducts(filterPreço);
+
+      setClear("Noclear");
+    }
   }, [preço]);
   return (
     <div>
@@ -131,7 +104,7 @@ useEffect(() => {
             type="checkbox"
             onClick={() => setPreço(301)}
           ></input>
-      de R$301 até R$500
+          de R$301 até R$500
         </div>
         <div className="checkbox">
           <input
@@ -141,7 +114,7 @@ useEffect(() => {
             type="checkbox"
             onClick={() => setPreço(1)}
           ></input>
-        a partir de R$ 01
+          a partir de R$ 01
         </div>
       </div>
     </div>
